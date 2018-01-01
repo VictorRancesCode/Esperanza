@@ -1,0 +1,71 @@
+{% extends 'layout/base.html' %}
+{% load static from staticfiles %}
+
+{% block meta %}
+<meta property="og:url" content="http://localhost:8000/detail/{{person.slug}}/"/>
+<meta property="og:type" content="profile"/>
+{% if person.type_publication == "found" %}
+<meta property="og:title" content="Estamos buscando a familiares de {{person.first_name}} {{person.last_name}}"/>
+<meta property="og:description"
+      content="{{person.first_name}} {{person.last_name}}  fue encontrado(a) en {{person.place}} el {{person.date}}. &iexcl;Necesitamos tu ayuda para difundir!"/>
+
+{% else %}
+<meta property="og:title" content="Estamos buscando a {{person.first_name}} {{person.last_name}}"/>
+<meta property="og:description"
+      content="{{person.first_name}} {{person.last_name}} se perdio;. La ultima vez que fue visto estaba en {{person.place}}, el {{person.date}}. &iexcl;Necesitamos tu ayuda para difundir!"/>
+
+{% endif %}
+<meta property="og:image" content="http://localhost:8000/media/{{person.photo}}"/>
+<meta property="og:image:width" content="256"/>
+<meta property="og:image:height" content="326"/>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="text-center">
+        <div style="padding-top: 5px; padding-bottom: 5px"
+             class="card-header text-center {% if person.type_publication == "found" %} alert-warning {% else %} alert-danger {% endif %}">
+        <h1>{% if person.type_publication == "found" %} Encontrado {% else %} Desaparecido {% endif %}</h1>
+    </div>
+    <h1>
+        {{person.first_name}}
+    </h1>
+    <div class="form-inline text-center justify-content-center">
+        <Button onclick="facebookPublish('http://localhost:8000/detail/{{person.slug}}/')" class="btn button-facebook" href="#" style="margin-right: 10px; margin-left: 10px; margin-top: 5px">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            Compartir
+        </Button>
+        <a class="btn button-twitter" href="#" style="margin-right: 10px; margin-left: 10px; margin-top: 5px">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            Twittear
+        </a>
+        <a class="btn btn-success" href="#" style="margin-right: 10px; margin-left: 10px; margin-top: 5px">
+            <i class="fa fa-print" aria-hidden="true"></i>
+            Imprimir
+        </a>
+
+    </div>
+    <img class="img-fluid col-lg-4" src="/media/{{person.photo}}">
+    <div>
+        {% if person.type_publication == "found" %}
+
+        <h4> Estamos buscando a familiares de {{person.first_name|upper}}. Encontrado(a) el {{person.date}} en
+            {{person.place}}</h4>
+
+        <h5>Detalles: {{person.detail}}</h5>
+        {% else %}
+        <h4>{{person.first_name|upper}} está perdido(a). Fue vista por última vez el {{person.date}}, en
+            {{person.place}}
+
+            Tiene {{person.age}} años.</h4>
+        <h5>Detalles: {{person.detail}}</h5>
+        {% endif %}
+    </div>
+</div>
+</div>
+<footer class="footer bg-dark " style="color: white">
+    <div class="container">
+
+    </div>
+</footer>
+{% endblock %}

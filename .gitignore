@@ -1,0 +1,9 @@
+*.pyc
+*.sqlite3
+*.retry
+__pycache__
+.ropeproject
+.cache
+.idea
+.python
+.python-version

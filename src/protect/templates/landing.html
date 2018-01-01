@@ -1,0 +1,76 @@
+{% extends 'layout/base.html' %}
+{% load static from staticfiles %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for person in persons %}
+
+        <div class="col-lg-3" style="margin-top: 15px">
+            <div class="card">
+
+                <div style="padding-top: 5px; padding-bottom: 5px"
+                     class="card-header text-center {% if person.type_publication == "found" %} alert-warning {% else %} alert-danger {% endif %}">
+                {{person.type_publication|upper}} -
+                {% if person.type_publication == "found" %} ENCONTRADO {% else %} DESAPARECIDO {% endif %}
+            </div>
+            <img class="img-fluid" src="/media/{{person.photo}}" style="width: 100%">
+            <div class="card-body">
+                <h6><a href="#">{{person.first_name}} {{person.last_name}}</a></h6>
+                <p style="margin-bottom: 0px; font-size: 11px">  {% if person.type_publication == "found" %} Encontrado el: {% else %} Ultima vez visto: {% endif %}{{person.date}}</p>
+            </div>
+            <div class="card-footer text-muted" style="padding: 5px">
+                <a style="width: 100%" href="/detail/{{person.slug}}" class="btn btn-outline-dark" role="button"
+                   aria-disabled="true">Mas
+                    Detalle</a>
+                <div class="col-lg-12">
+                    <div class="row" style="text-align: center">
+                        <div class="col-lg-6" style="padding: 5px">
+                            <Button onclick="facebookPublish('http://localhost:8000/detail/{{person.slug}}/')"
+                                    class="btn button-facebook" href="#" style="width: 100%; ">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                Compartir
+                            </Button>
+                        </div>
+                        <div class="col-lg-6" style="padding: 5px">
+                            <a class="btn button-twitter" href="#" style="width: 100%">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                Twittear
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<nav aria-label="Page navigation example" style="margin-top: 20px">
+    {% if persons.has_other_pages %}
+    <ul class="pagination justify-content-center">
+        {% if persons.has_previous %}
+        <li class="page-item"><a class="page-link disabled"
+                                 href="?page={{ persons.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+        <li class="page-item disabled"><a class="page-link">&laquo;</a></li>
+        {% endif %}
+        {% for i in persons.paginator.page_range %}
+        {% if persons.number == i %}
+        <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if users.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ persons.next_page_number }}">&raquo;</a></li>
+        {% else %}
+        <li class="page-item disabled"><a class="page-link">&raquo;</a></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+</nav>
+</div>
+
+{% endblock %}
