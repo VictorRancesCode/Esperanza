@@ -2,6 +2,9 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render
 
 # Create your views here.
+from django.views.generic import CreateView
+
+from protect.core.forms import ReportForm
 from protect.core.models import Person
 
 
@@ -51,3 +54,10 @@ def detail_slug(request, slug):
     template_name = 'detail.html'
     person = Person.objects.get(is_active="True", slug=slug)
     return render(request, template_name, {'person': person})
+
+
+class ReportPerson(CreateView):
+    template_name = 'report_person.html'
+    model = Person
+    form_class = ReportForm
+    sucess_url = '/'

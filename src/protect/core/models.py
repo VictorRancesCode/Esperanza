@@ -11,21 +11,21 @@ class Person(models.Model):
     missing = 'missing'
     found = "found"
     TYPE_PUBLICATION_CHOICES = (
-        (missing, 'missing'),
-        (found, 'found'),
+        (missing, _('missing')),
+        (found, _('found')),
     )
     GENDER_CHOICES = (
-        ('M', 'Male'),
-        ('F', 'Female'),
-        ('Other', 'Other')
+        ('M', _('Male')),
+        ('F', _('Female')),
+        ('Other', _('Other'))
     )
-    email = models.EmailField(_('email address'), blank=True, help_text="Email de la Persona que esta reportando")
+    email = models.EmailField(_('email address'), blank=True, help_text=_("Email of the person who is reporting"))
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
     last_name = models.CharField(_('last name'), max_length=150, blank=True)
     nickname = models.CharField(_('nickname'), max_length=150, blank=True)
     place = models.CharField(_('place'), max_length=150, blank=True)
     date = models.DateField(_('date'))
-    photo = models.ImageField(upload_to='person', null=True, blank=True)
+    photo = models.ImageField(_('photo'),upload_to='person', null=True, blank=True)
     comment_photo = models.CharField(_('comment the photo'), max_length=150, blank=True)
     age = models.IntegerField(_('age'))
     gender = models.CharField(_('gender'), max_length=150, blank=True, choices=GENDER_CHOICES, default='M')

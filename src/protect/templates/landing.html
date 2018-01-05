@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}
 {% load static from staticfiles %}
-
+{% load i18n %}
 
 {% block body %}
 
@@ -23,8 +23,8 @@
             </div>
             <div class="card-footer text-muted" style="padding: 5px">
                 <a style="width: 100%" href="/detail/{{person.slug}}" class="btn btn-outline-dark" role="button"
-                   aria-disabled="true">Mas
-                    Detalle</a>
+                   aria-disabled="true">
+                    {% trans "More details" %}</a>
                 <div class="col-lg-12">
                     <div class="row" style="text-align: center">
                         <div class="col-lg-6" style="padding: 5px">

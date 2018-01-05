@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-05 17:34-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/protect/core/models.py:14
+msgid "missing"
+msgstr "desaparecido(a)"
+
+#: src/protect/core/models.py:15
+msgid "found"
+msgstr "encontrado(a)"
+
+#: src/protect/core/models.py:18
+msgid "Male"
+msgstr "hombre"
+
+#: src/protect/core/models.py:19
+msgid "Female"
+msgstr "mujer"
+
+#: src/protect/core/models.py:20
+msgid "Other"
+msgstr "Otros"
+
+#: src/protect/core/models.py:22
+msgid "email address"
+msgstr "Correo"
+
+#: src/protect/core/models.py:22
+msgid "Email of the person who is reporting"
+msgstr "Correo de la persona que esta reportando"
+
+#: src/protect/core/models.py:23
+msgid "first name"
+msgstr "Nombres"
+
+#: src/protect/core/models.py:24
+msgid "last name"
+msgstr "Apellidos"
+
+#: src/protect/core/models.py:25
+msgid "nickname"
+msgstr "Apodo"
+
+#: src/protect/core/models.py:26
+msgid "place"
+msgstr "Lugar"
+
+#: src/protect/core/models.py:27
+msgid "date"
+msgstr "Fecha"
+
+#: src/protect/core/models.py:28
+msgid "photo"
+msgstr "Foto"
+
+#: src/protect/core/models.py:29
+msgid "comment the photo"
+msgstr "Comentario para la Foto"
+
+#: src/protect/core/models.py:30
+msgid "age"
+msgstr "Años"
+
+#: src/protect/core/models.py:31
+msgid "gender"
+msgstr "Sexo"
+
+#: src/protect/core/models.py:32
+msgid "details"
+msgstr "Detalles"
+
+#: src/protect/core/models.py:33
+msgid "active"
+msgstr "activo"
+
+#: src/protect/core/models.py:34
+msgid "type"
+msgstr "tipo"
+
+#: src/protect/settings.py:111
+msgid "Español"
+msgstr "Spanish"
+
+#: src/protect/settings.py:112
+msgid "Ingles"
+msgstr "English"
+
+#: src/protect/templates/landing.html:27
+msgid "More details"
+msgstr "Detalles"
+
+#: src/protect/templates/layout/base.html:20
+#: src/protect/templates/layout/base.html:33
+msgid "Missing people"
+msgstr "Personas desaparecidas"
+
+#: src/protect/templates/layout/base.html:29
+msgid "introduction"
+msgstr "Inicio"
+
+#: src/protect/templates/layout/base.html:36
+msgid "They look for their families"
+msgstr "Buscan a su familia"
+
+#: src/protect/templates/layout/base.html:41
+msgid "What to do"
+msgstr "Que hacer"
+
+#: src/protect/templates/layout/base.html:44
+#: src/protect/templates/report_person.html:15
+msgid "Report a person"
+msgstr "Reportar Personas"

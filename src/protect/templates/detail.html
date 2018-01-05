@@ -24,14 +24,15 @@
 <div class="container">
     <div class="text-center">
         <div style="padding-top: 5px; padding-bottom: 5px"
-             class="card-header text-center {% if person.type_publication == "found" %} alert-warning {% else %} alert-danger {% endif %}">
+             class="card-header text-center {% if person.type_publication == " found" %} alert-warning {% else %} alert-danger {% endif %}">
         <h1>{% if person.type_publication == "found" %} Encontrado {% else %} Desaparecido {% endif %}</h1>
     </div>
     <h1>
         {{person.first_name}}
     </h1>
     <div class="form-inline text-center justify-content-center">
-        <Button onclick="facebookPublish('http://localhost:8000/detail/{{person.slug}}/')" class="btn button-facebook" href="#" style="margin-right: 10px; margin-left: 10px; margin-top: 5px">
+        <Button onclick="facebookPublish('http://localhost:8000/detail/{{person.slug}}/')" class="btn button-facebook"
+                href="#" style="margin-right: 10px; margin-left: 10px; margin-top: 5px">
             <i class="fa fa-facebook" aria-hidden="true"></i>
             Compartir
         </Button>
@@ -63,7 +64,7 @@
     </div>
 </div>
 </div>
-<footer class="footer bg-dark " style="color: white">
+<footer class="footer bg-dark " style="color: white;margin-top: 20px">
     <div class="container">
 
     </div>

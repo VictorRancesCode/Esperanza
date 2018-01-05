@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-19 15:33-0500\n"
+"POT-Creation-Date: 2018-01-05 17:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,110 +17,150 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:9 templates/admin/base.html:278
+#: src/jet/filters.py:70
+msgid "From date"
+msgstr ""
+
+#: src/jet/filters.py:76
+msgid "To date"
+msgstr ""
+
+#: src/jet/models.py:9 src/jet/templates/admin/base.html:292
 msgid "URL"
 msgstr "URL"
 
-#: models.py:10
+#: src/jet/models.py:10
 msgid "title"
 msgstr "título"
 
-#: models.py:11 models.py:26
+#: src/jet/models.py:11 src/jet/models.py:26
 msgid "user"
 msgstr "usuario"
 
-#: models.py:12 models.py:27
+#: src/jet/models.py:12 src/jet/models.py:27
 msgid "date created"
 msgstr "fecha de creación"
 
-#: models.py:15
+#: src/jet/models.py:15
 msgid "bookmark"
 msgstr "marcador"
 
-#: models.py:16 templates/admin/base.html:294
+#: src/jet/models.py:16 src/jet/templates/admin/base.html:308
 msgid "bookmarks"
 msgstr "marcadores"
 
-#: models.py:25
+#: src/jet/models.py:25
 msgid "application name"
 msgstr "Nombre de la aplicación"
 
-#: models.py:30
+#: src/jet/models.py:30
 msgid "pinned application"
 msgstr "aplicación anclada"
 
-#: models.py:31
+#: src/jet/models.py:31
 msgid "pinned applications"
 msgstr "aplicaciones ancladas"
 
-#: templates/admin/base.html:55
+#: src/jet/templates/admin/base.html:57
 msgid "Welcome,"
 msgstr "Bienvenido, "
 
-#: templates/admin/base.html:60 templates/admin/base.html:161
+#: src/jet/templates/admin/base.html:62 src/jet/templates/admin/base.html:183
 msgid "View site"
 msgstr "Ver sitio"
 
-#: templates/admin/base.html:65 templates/admin/base.html:170
+#: src/jet/templates/admin/base.html:67 src/jet/templates/admin/base.html:192
 msgid "Documentation"
 msgstr "Documentación"
 
-#: templates/admin/base.html:69
+#: src/jet/templates/admin/base.html:71
 msgid "Change password"
 msgstr "Cambiar contraseña"
 
-#: templates/admin/base.html:71
+#: src/jet/templates/admin/base.html:73
 msgid "Log out"
 msgstr "Cerrar sessión"
 
-#: templates/admin/base.html:80 templates/admin/base.html:153
+#: src/jet/templates/admin/base.html:83 src/jet/templates/admin/base.html:175
 msgid "Home"
 msgstr "Inicio"
 
-#: templates/admin/base.html:133
+#: src/jet/templates/admin/base.html:151
 msgid "back"
 msgstr "volver"
 
-#: templates/admin/base.html:217
+#: src/jet/templates/admin/base.html:236
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: templates/admin/base.html:243
+#: src/jet/templates/admin/base.html:260
 msgid "Hide applications"
 msgstr "Ocultar aplicaciones"
 
-#: templates/admin/base.html:244
+#: src/jet/templates/admin/base.html:261
 msgid "Show hidden"
 msgstr "Mostrar ocultas"
 
-#: templates/admin/base.html:273 templates/admin/base.html:292
+#: src/jet/templates/admin/base.html:287 src/jet/templates/admin/base.html:306
 msgid "Add bookmark"
 msgstr "Añadir marcadores"
 
-#: templates/admin/base.html:276
+#: src/jet/templates/admin/base.html:290
 msgid "Title"
 msgstr "Título"
 
-#: templates/admin/base.html:286
+#: src/jet/templates/admin/base.html:300
 msgid "Delete bookmark"
 msgstr "Eliminar marcadores"
 
-#: templates/admin/base.html:287
+#: src/jet/templates/admin/base.html:301
 msgid "Are you sure want to delete this bookmark?"
 msgstr "Está seguro de que quiere eliminar este marcador?"
 
-#: templates/admin/base.html:302 templates/admin/base.html:309
+#: src/jet/templates/admin/base.html:316 src/jet/templates/admin/base.html:323
+#: src/jet/templates/admin/edit_inline/compact.html:3
 msgid "Remove"
 msgstr "Remover"
 
-#: templates/admin/base.html:339
+#: src/jet/templates/admin/base.html:345
+#: src/jet/templates/rangefilter/date_filter.html:33
+msgid "Search"
+msgstr ""
+
+#: src/jet/templates/admin/base.html:350
 msgid "Application page"
 msgstr "Página de aplicación"
 
-#: templates/admin/base.html:363
+#: src/jet/templates/admin/base.html:376
 msgid "current theme"
 msgstr "tema actual"
 
-#: templates/admin/popup_response.html:4
+#: src/jet/templates/admin/edit_inline/compact.html:12
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: src/jet/templates/admin/edit_inline/compact.html:37
+msgid "Change"
+msgstr ""
+
+#: src/jet/templates/admin/edit_inline/compact.html:43
+#, fuzzy
+#| msgid "View site"
+msgid "View on site"
+msgstr "Ver sitio"
+
+#: src/jet/templates/admin/popup_response.html:4
 msgid "Popup closing..."
 msgstr "Cerrando ventana emergente..."
+
+#: src/jet/templates/jet/related_field_ajax_list_filter.html:2
+#: src/jet/templates/rangefilter/date_filter.html:2
+#: src/jet/templates/rangefilter/date_filter.html:16
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: src/jet/templates/rangefilter/date_filter.html:34
+msgid "Reset"
+msgstr ""

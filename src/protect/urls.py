@@ -17,12 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 
-from protect.core.views import landing, detail_slug, missing, found
+from protect.core.views import landing, detail_slug, missing, found, ReportPerson
 
 from django.conf import settings
 
 app_name = "protect"
 urlpatterns = [
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     url(r'^jet/', include('jet.urls', namespace='jet')),
     url(r'^jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
@@ -30,6 +31,7 @@ urlpatterns = [
     url(r'^missing/$', missing, name="missing_people"),
     url(r'found/$', found, name="found_people"),
     url(r'^detail/(?P<slug>.*)/$', detail_slug, name="detail"),
+    url(r'^report/$', ReportPerson.as_view(), name="report"),
 ]
 admin.site.site_header = "Personas Desaparecidas"
 
