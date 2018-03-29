@@ -24,6 +24,7 @@ from django.conf import settings
 app_name = "protect"
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'api/', include('protect.core.api.urls')),
     path('admin/', admin.site.urls),
     url(r'^jet/', include('jet.urls', namespace='jet')),
     url(r'^jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
